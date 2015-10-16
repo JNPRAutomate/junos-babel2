@@ -1,0 +1,6 @@
+host:
+    management:
+        ip: 10.94.194.225
+        mask: 24
+    loopback:
+        ip: 1.1.2.6

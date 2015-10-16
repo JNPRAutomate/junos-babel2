@@ -1,0 +1,9 @@
+---
+- name: Create and apply Aggregation devices configuration in MC-LAG mode
+  hosts: aggregation
+  connection: local
+  gather_facts: no
+  roles:
+    - common
+    - _babel2_mclag_common
+    - _babel2_mclag_aggregation

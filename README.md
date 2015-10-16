@@ -1,0 +1,27 @@
+
+# What is Babel2 ?
+Babel2 is a small tool working on top of Ansible that help to easily create and deploy configurations for different type of Datacenter L2 topologies like :
+ - MC-LAG Fabric
+ - Junos Fusion Datacenter
+
+# How does it works
+
+Babel2 takes inputs independent of the network architecture and is able to generate
+configuration files for Junos Fusion Datacenter and MC-LAG Fabric:
+
+These independent inputs are provided via 3 main files
+ - [hosts] Standard Ansible Inventory File [[example](add link to  example)] [[definition](add link to wiki)]
+ - [topology.yaml] List of all physical connections [example](add link to  example) [definition](add link to wiki)
+ - [configuration.yaml] All information regarding L2 Networks that needs to be deploy [example](add link to  example) [definition](add link to wiki)
+
+Based on these information, Babel2 will dynamically generate Ansible variables file that are matching pre-defined templates for Junos Fusion Datacenter and MC-LAG
+Once these variables are generated based on customers input, the generation of all configuration and the deployment of those configuration is done entirely with Ansible in a standard way.
+
+Ansible templates and playbooks are provided to be able to:
+ - Build configurations for MC-LAG and/or Junos Fusion Datacenter
+ - Build and deploy configurations for MC-LAG and/or Junos Fusion Datacenter
+[See list of provided playbooks](add link)
+
+# How to start
+ 1/ Installation Instruction and dependencies list available
+ 2/ Getting start Guide

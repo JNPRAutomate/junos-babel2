@@ -1,0 +1,9 @@
+---
+- name: Create and apply access devices configuration in MC-LAG mode
+  hosts: access
+  connection: local
+  gather_facts: no
+  roles:
+    - common
+    - _babel2_mclag_access
+    - _babel2_mclag_common

@@ -1,0 +1,5 @@
+---
+# This playbook will generate and apply configuration to all of the devices
+- include: jfd.make_clean.p.yaml
+- include: jfd.agg.p.yaml
+- include: jfd.assemble.p.yaml

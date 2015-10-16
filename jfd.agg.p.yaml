@@ -1,0 +1,8 @@
+---
+- name: Create and apply Aggregation devices configuration in JFD mode
+  hosts: aggregation
+  connection: local
+  gather_facts: no
+  roles:
+    - common
+    - _babel2_jfd

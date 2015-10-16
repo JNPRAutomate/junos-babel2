@@ -1,0 +1,10 @@
+# This task merges all the configuration fragments into one file
+- name: Merge configuration
+  hosts: aggregation
+  connection: local
+  gather_facts: no
+  roles:
+    - Juniper.junos
+  tasks:
+    - name: Assembling configurations
+      assemble: src={{ build_dir }} dest={{ jfd_conf }}

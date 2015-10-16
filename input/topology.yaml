@@ -1,0 +1,38 @@
+
+##
+## Internal Links define point-to-point physical connection between all devices (aggregation and access)
+## it should be define with like this [ <device A name> <device A interface>, <device B name> <device B interface> ]
+##
+
+internal_links:
+## Agg to Access
+    - [ qfx5100-01 et-0/0/48, qfx10002-01 et-0/0/0 ]
+    - [ qfx5100-01 et-0/0/49, qfx10002-02 et-0/0/0 ]
+    - [ qfx5100-02 et-0/0/48, qfx10002-01 et-0/0/1 ]
+    - [ qfx5100-02 et-0/0/49, qfx10002-02 et-0/0/1 ]
+    - [ qfx5100-03 et-0/0/48, qfx10002-01 et-0/0/2 ]
+    - [ qfx5100-03 et-0/0/49, qfx10002-02 et-0/0/2 ]
+    - [ qfx5100-04 et-0/0/48, qfx10002-01 et-0/0/3 ]
+    - [ qfx5100-04 et-0/0/49, qfx10002-02 et-0/0/3 ]
+    - [ qfx5100-05 et-0/0/48, qfx10002-01 et-0/0/4 ]
+    - [ qfx5100-05 et-0/0/49, qfx10002-02 et-0/0/4 ]
+    - [ qfx5100-06 et-0/0/48, qfx10002-01 et-0/0/5 ]
+    - [ qfx5100-06 et-0/0/49, qfx10002-02 et-0/0/5 ]
+
+## Agg to Agg
+    - [ qfx10002-01 et-0/0/14, qfx10002-02 et-0/0/14 ]
+    - [ qfx10002-01 et-0/0/15, qfx10002-02 et-0/0/15 ]
+
+## Acc to Acc
+    - [ qfx5100-01 xe-0/0/28, qfx5100-02 xe-0/0/28 ]
+    - [ qfx5100-01 xe-0/0/29, qfx5100-02 xe-0/0/29 ]
+    - [ qfx5100-03 xe-0/0/28, qfx5100-04 xe-0/0/28 ]
+    - [ qfx5100-03 xe-0/0/29, qfx5100-04 xe-0/0/29 ]
+    - [ qfx5100-05 xe-0/0/28, qfx5100-06 xe-0/0/28 ]
+    - [ qfx5100-05 xe-0/0/29, qfx5100-06 xe-0/0/29 ]
+
+external_links:
+    to server 01: [ qfx5100-01 et-0/0/50, qfx5100-02 et-0/0/50 ]
+    to server 02: [ qfx5100-01 et-0/0/51, qfx5100-02 et-0/0/51 ]
+    to server 03: [ qfx5100-03 et-0/0/50, qfx5100-04 et-0/0/50 ]
+    to server 04: [ qfx5100-03 et-0/0/51, qfx5100-04 et-0/0/51 ]

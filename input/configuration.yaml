@@ -1,0 +1,33 @@
+
+
+##
+global:
+    default_gw_ip: 1            # in each network, the default GW ip will be .1
+    router_ips: [2,3,4,5]       # Ip allocated to router hosting the default GW (VRRP)
+
+vlans:
+    FE-XYZ-100:
+        id: 100
+        description: Front-End for Application XYZ
+        network: 10.0.100.0/24
+        links: [ to server 01, to server 02 ]
+    BE-XYZ-101:
+        id: 101
+        description: Back-End for Application XYZ
+        network: 10.0.101.0/24
+        links: [ to server 02, to server 03 ]
+    Mgmt-201:
+        id: 201
+        description: Management
+        network: 10.0.201.0/24
+        links: [ to server 01, to server 02, to server 03, to server 04 ]
+
+## this file accept Jinja2 templates syntax in order to be able to insert some logic
+## one example might be the creation of a loop in order to avoid creating all vlans manually
+{% for i in range(200,210) %}
+    BE-LOOP-{{ i }}:
+        id: {{ i }}
+        description: Back-End for Application LOOP {{ i }}
+        network: 10.0.{{ i }}.0/24
+        links: [ to server 02, to server 03 ]
+{% endfor %}

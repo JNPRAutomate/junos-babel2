@@ -1,0 +1,7 @@
+---
+# This playbook will generate and apply configuration to all of the devices
+
+- include: mclag.make_clean.p.yaml
+- include: mclag.agg.p.yaml
+- include: mclag.access.p.yaml
+- include: mclag.assemble.p.yaml

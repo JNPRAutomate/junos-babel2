@@ -1,0 +1,43 @@
+# The 'all' group is the top of the hierarchy. The 'children' suffix
+# means that the lines below are also groups, rather than hostnames.
+# This 'all' group contains all the hosts for both sites.
+[all:children]
+aggregation
+access
+
+# Aggregation and Access define the two main type of devices
+# In JFD access devices will become satellites
+[aggregation]
+qfx10002-01
+qfx10002-02
+
+[access:children]
+access01
+access02
+access03
+
+## Access devices are grouped by pair ##
+[access01]
+qfx5100-01
+qfx5100-02
+
+[access02]
+qfx5100-03
+qfx5100-04
+
+[access03]
+qfx5100-05
+qfx5100-06
+
+## Group per device type ##
+[qfx10000]
+qfx10002-01
+qfx10002-02
+
+[qfx5100]
+qfx5100-01
+qfx5100-02
+qfx5100-03
+qfx5100-04
+qfx5100-05
+qfx5100-06

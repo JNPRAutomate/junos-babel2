@@ -1,0 +1,5 @@
+---
+- name: Building OSPF configuration for aggregation devices
+  template: >
+    src=main.conf.j2
+    dest={{ build_dir }}/ospf.conf.part

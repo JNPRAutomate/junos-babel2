@@ -1,0 +1,8 @@
+
+validate:
+    main:
+        internal_links: { type: list,  mandatory: 1 }
+        external_links: { type dict, validate: external_lnk, mandatory: 1  }
+    # internal_lnk:       { type: list }
+    external_lnk:
+        '*': { type: list }

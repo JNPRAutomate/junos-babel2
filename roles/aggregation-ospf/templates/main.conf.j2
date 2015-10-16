@@ -1,0 +1,20 @@
+
+routing-options {
+    router-id {{ host.loopback.ip }}
+}
+
+protocols {
+    ospf {
+        area 0.0.0.0 {
+            interface lo.0 passive
+{% for interface in ospf.interface %}
+            interface {{ interface }}
+{% endfor %}
+{% for vlan in vlans %}
+{% if vlan.ip is defined %}
+            interface vlan.{{ vlan.id }} passive
+{% endif %}
+{% endfor %}
+        }
+    }
+}

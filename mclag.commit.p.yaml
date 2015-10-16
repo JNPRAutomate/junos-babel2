@@ -1,0 +1,17 @@
+---
+- name: Apply configuration
+  hosts: all
+  connection: local
+  gather_facts: no
+  roles:
+    - Juniper.junos
+  tasks:
+    - name: Pushing config ... please wait
+      junos_install_config: >
+        host={{ inventory_hostname }}
+        port={{ PLATFORM.netconf_port }}
+        user=root
+        passwd=Embe1mpls
+        file={{ mclag_conf }}
+        overwrite=yes
+        logfile=/tmp/build/changes.log

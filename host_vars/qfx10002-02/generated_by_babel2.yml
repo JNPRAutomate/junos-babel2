@@ -1,0 +1,182 @@
+jfd:
+    chassis_id: 2
+    icl_interface: ae0
+    links:
+        to_peer:
+        - xe-0/0/28
+        - xe-0/0/29
+        to_satellite:
+        -   id: 100
+            links:
+            - et-0/0/0
+            name: qfx5100-01
+        -   id: 101
+            links:
+            - et-0/0/1
+            name: qfx5100-02
+        -   id: 102
+            links:
+            - et-0/0/2
+            name: qfx5100-03
+        -   id: 103
+            links:
+            - et-0/0/3
+            name: qfx5100-04
+        -   id: 104
+            links:
+            - et-0/0/4
+            name: qfx5100-05
+        -   id: 105
+            links:
+            - et-0/0/5
+            name: qfx5100-06
+        to_servers:
+        -   description: to to server 01
+            key: 1
+            links:
+            - et-100/0/50
+            - et-101/0/50
+            vlans:
+            - 100
+            - 201
+        -   description: to to server 02
+            key: 2
+            links:
+            - et-100/0/51
+            - et-101/0/51
+            vlans:
+            - 100
+            - 208
+            - 209
+            - 200
+            - 201
+            - 204
+            - 101
+            - 206
+            - 207
+            - 205
+            - 201
+            - 202
+            - 203
+        -   description: to to server 04
+            key: 1
+            links:
+            - et-102/0/51
+            - et-103/0/51
+            vlans:
+            - 201
+        -   description: to to server 03
+            key: 2
+            links:
+            - et-102/0/50
+            - et-103/0/50
+            vlans:
+            - 208
+            - 209
+            - 200
+            - 201
+            - 204
+            - 101
+            - 206
+            - 207
+            - 205
+            - 201
+            - 202
+            - 203
+    peer_chassis_id: 1
+    peer_ip: 1.1.1.1
+    peer_name: qfx10002-01
+mclag:
+    chassis_id: 1
+    iccp:
+        local_ip: 1.1.1.2
+        peer_ip: 1.1.1.1
+    icl_interface: ae0
+    links:
+        to_access:
+        -   description: to_access01
+            key: 1
+            links:
+            - et-0/0/0
+            - et-0/0/1
+        -   description: to_access02
+            key: 2
+            links:
+            - et-0/0/2
+            - et-0/0/3
+        -   description: to_access03
+            key: 3
+            links:
+            - et-0/0/4
+            - et-0/0/5
+        to_peer:
+        - et-0/0/14
+        - et-0/0/15
+    nbr_ae: 5
+    status_control: standby
+vlans:
+-   id: 100
+    ip: 10.0.100.3
+    mask: '24'
+    name: FE-XYZ-100
+    vip: 10.0.100.1
+-   id: 208
+    ip: 10.0.208.3
+    mask: '24'
+    name: BE-LOOP-208
+    vip: 10.0.208.1
+-   id: 209
+    ip: 10.0.209.3
+    mask: '24'
+    name: BE-LOOP-209
+    vip: 10.0.209.1
+-   id: 200
+    ip: 10.0.200.3
+    mask: '24'
+    name: BE-LOOP-200
+    vip: 10.0.200.1
+-   id: 201
+    ip: 10.0.201.3
+    mask: '24'
+    name: Mgmt-201
+    vip: 10.0.201.1
+-   id: 204
+    ip: 10.0.204.3
+    mask: '24'
+    name: BE-LOOP-204
+    vip: 10.0.204.1
+-   id: 101
+    ip: 10.0.101.3
+    mask: '24'
+    name: BE-XYZ-101
+    vip: 10.0.101.1
+-   id: 206
+    ip: 10.0.206.3
+    mask: '24'
+    name: BE-LOOP-206
+    vip: 10.0.206.1
+-   id: 207
+    ip: 10.0.207.3
+    mask: '24'
+    name: BE-LOOP-207
+    vip: 10.0.207.1
+-   id: 205
+    ip: 10.0.205.3
+    mask: '24'
+    name: BE-LOOP-205
+    vip: 10.0.205.1
+-   id: 201
+    ip: 10.0.201.3
+    mask: '24'
+    name: BE-LOOP-201
+    vip: 10.0.201.1
+-   id: 202
+    ip: 10.0.202.3
+    mask: '24'
+    name: BE-LOOP-202
+    vip: 10.0.202.1
+-   id: 203
+    ip: 10.0.203.3
+    mask: '24'
+    name: BE-LOOP-203
+    vip: 10.0.203.1
