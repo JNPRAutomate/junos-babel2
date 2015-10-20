@@ -17,9 +17,9 @@ vlans:
         network: 10.0.101.0/24
         links: [ to server 02, to server 03 ]
     Mgmt-201:
-        id: 201
+        id: 10
         description: Management
-        network: 10.0.201.0/24
+        network: 10.0.10.0/24
         links: [ to server 01, to server 02, to server 03, to server 04 ]
 
 ## this file accept Jinja2 templates syntax in order to be able to insert some logic
