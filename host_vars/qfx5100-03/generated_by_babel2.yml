@@ -6,18 +6,18 @@ mclag:
     icl_interface: ae0
     links:
         to_aggregation:
-        - et-0/0/48
-        - et-0/0/49
+        - et-0/0/53
+        - et-0/0/52
         to_peer:
-        - xe-0/0/28
-        - xe-0/0/29
+        - xe-0/0/8
+        - xe-0/0/9
         to_servers:
         -   description: to server 04
             key: 2
             links:
             - et-0/0/51
             vlans:
-            - 201
+            - 10
         -   description: to server 03
             key: 3
             links:
@@ -26,7 +26,7 @@ mclag:
             - 208
             - 209
             - 200
-            - 201
+            - 10
             - 204
             - 101
             - 206
@@ -46,7 +46,7 @@ vlans:
     name: BE-LOOP-209
 -   id: 200
     name: BE-LOOP-200
--   id: 201
+-   id: 10
     name: Mgmt-201
 -   id: 204
     name: BE-LOOP-204

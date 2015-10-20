@@ -5,12 +5,8 @@ mclag:
         peer_ip: 1.1.1.2
     icl_interface: ae0
     links:
-        to_aggregation:
-        - et-0/0/48
-        - et-0/0/49
-        to_peer:
-        - xe-0/0/28
-        - xe-0/0/29
+        to_aggregation: []
+        to_peer: []
         to_servers: []
     nbr_ae: 2
     status_control: active
@@ -23,7 +19,7 @@ vlans:
     name: BE-LOOP-209
 -   id: 200
     name: BE-LOOP-200
--   id: 201
+-   id: 10
     name: Mgmt-201
 -   id: 204
     name: BE-LOOP-204

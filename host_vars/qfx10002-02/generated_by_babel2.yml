@@ -2,33 +2,29 @@ jfd:
     chassis_id: 2
     icl_interface: ae0
     links:
-        to_peer:
-        - xe-0/0/28
-        - xe-0/0/29
+        to_peer: []
         to_satellite:
         -   id: 100
             links:
-            - et-0/0/0
+            - et-0/0/17
             name: qfx5100-01
         -   id: 101
             links:
-            - et-0/0/1
+            - et-0/0/3
             name: qfx5100-02
         -   id: 102
             links:
-            - et-0/0/2
+            - et-0/0/5
             name: qfx5100-03
         -   id: 103
             links:
-            - et-0/0/3
+            - et-0/0/16
             name: qfx5100-04
         -   id: 104
-            links:
-            - et-0/0/4
+            links: []
             name: qfx5100-05
         -   id: 105
-            links:
-            - et-0/0/5
+            links: []
             name: qfx5100-06
         to_servers:
         -   description: to to server 01
@@ -38,7 +34,7 @@ jfd:
             - et-101/0/50
             vlans:
             - 100
-            - 201
+            - 10
         -   description: to to server 02
             key: 2
             links:
@@ -49,7 +45,7 @@ jfd:
             - 208
             - 209
             - 200
-            - 201
+            - 10
             - 204
             - 101
             - 206
@@ -64,7 +60,7 @@ jfd:
             - et-102/0/51
             - et-103/0/51
             vlans:
-            - 201
+            - 10
         -   description: to to server 03
             key: 2
             links:
@@ -74,7 +70,7 @@ jfd:
             - 208
             - 209
             - 200
-            - 201
+            - 10
             - 204
             - 101
             - 206
@@ -97,21 +93,19 @@ mclag:
         -   description: to_access01
             key: 1
             links:
-            - et-0/0/0
-            - et-0/0/1
+            - et-0/0/17
+            - et-0/0/3
         -   description: to_access02
             key: 2
             links:
-            - et-0/0/2
-            - et-0/0/3
+            - et-0/0/5
+            - et-0/0/16
         -   description: to_access03
             key: 3
-            links:
-            - et-0/0/4
-            - et-0/0/5
+            links: []
         to_peer:
-        - et-0/0/14
-        - et-0/0/15
+        - et-0/0/24
+        - et-0/0/25
     nbr_ae: 5
     status_control: standby
 vlans:
@@ -135,11 +129,11 @@ vlans:
     mask: '24'
     name: BE-LOOP-200
     vip: 10.0.200.1
--   id: 201
-    ip: 10.0.201.3
+-   id: 10
+    ip: 10.0.10.3
     mask: '24'
     name: Mgmt-201
-    vip: 10.0.201.1
+    vip: 10.0.10.1
 -   id: 204
     ip: 10.0.204.3
     mask: '24'
