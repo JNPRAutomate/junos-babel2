@@ -29,5 +29,5 @@ vlans:
         id: {{ i }}
         description: Back-End for Application LOOP {{ i }}
         network: 10.0.{{ i }}.0/24
-        links: [ to server 02, to server 03 ]
+        links: [ to server 01, to server 02, to server 03 ]
 {% endfor %}

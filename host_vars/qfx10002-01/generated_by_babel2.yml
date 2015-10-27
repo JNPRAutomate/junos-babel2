@@ -2,11 +2,13 @@ jfd:
     chassis_id: 1
     icl_interface: ae0
     links:
-        to_peer: []
+        to_peer:
+        - xe-0/0/8
+        - xe-0/0/9
         to_satellite:
         -   id: 100
             links:
-            - et-0/0/16
+            - et-0/0/18
             name: qfx5100-01
         -   id: 101
             links:
@@ -20,21 +22,25 @@ jfd:
             links:
             - et-0/0/16
             name: qfx5100-04
-        -   id: 104
-            links: []
-            name: qfx5100-05
-        -   id: 105
-            links: []
-            name: qfx5100-06
         to_servers:
         -   description: to to server 01
             key: 1
             links:
-            - et-100/0/50
-            - et-101/0/50
+            - xe-100/0/10
+            - xe-101/0/10
             vlans:
             - 100
+            - 208
+            - 209
+            - 200
             - 10
+            - 204
+            - 206
+            - 207
+            - 205
+            - 201
+            - 202
+            - 203
         -   description: to to server 02
             key: 2
             links:
@@ -64,8 +70,8 @@ jfd:
         -   description: to to server 03
             key: 2
             links:
-            - et-102/0/50
-            - et-103/0/50
+            - xe-102/0/10
+            - xe-103/0/10
             vlans:
             - 208
             - 209
@@ -93,20 +99,17 @@ mclag:
         -   description: to_access01
             key: 1
             links:
-            - et-0/0/16
+            - et-0/0/18
             - et-0/0/3
         -   description: to_access02
             key: 2
             links:
             - et-0/0/5
             - et-0/0/16
-        -   description: to_access03
-            key: 3
-            links: []
         to_peer:
         - et-0/0/24
         - et-0/0/25
-    nbr_ae: 5
+    nbr_ae: 4
     status_control: active
 vlans:
 -   id: 100

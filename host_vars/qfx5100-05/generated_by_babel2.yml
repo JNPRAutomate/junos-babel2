@@ -11,6 +11,8 @@ mclag:
     nbr_ae: 2
     status_control: active
 vlans:
+-   id: 40
+    name: JPL40
 -   id: 100
     name: FE-XYZ-100
 -   id: 208

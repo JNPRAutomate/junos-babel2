@@ -6,8 +6,8 @@ mclag:
     icl_interface: ae0
     links:
         to_aggregation:
-        - et-0/0/53
         - et-0/0/52
+        - et-0/0/53
         to_peer:
         - xe-0/0/8
         - xe-0/0/9
@@ -15,10 +15,20 @@ mclag:
         -   description: to server 01
             key: 2
             links:
-            - et-0/0/50
+            - xe-0/0/10
             vlans:
             - 100
+            - 208
+            - 209
+            - 200
             - 10
+            - 204
+            - 206
+            - 207
+            - 205
+            - 201
+            - 202
+            - 203
         -   description: to server 02
             key: 3
             links:
