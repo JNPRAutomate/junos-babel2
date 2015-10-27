@@ -64,6 +64,7 @@ interfaces {
 {# AEs names start at AE2 and increment #}
 {% for server_group in mclag.links.to_servers %}
     ae{{ server_group.key }} {
+        description "{{ server_group.description }}";
         aggregated-ether-options {
             lacp {
                 active;
